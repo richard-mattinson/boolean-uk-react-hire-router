@@ -11,6 +11,7 @@ function Dashboard(props) {
         .then((res) => res.json())
         .then((data) => setPeople(data.results));
   }, []);
+  // the [] on the line stop State updating every time useEffect is called, avoiding the chance of an infinite loop
 
   console.log("People", people);
 

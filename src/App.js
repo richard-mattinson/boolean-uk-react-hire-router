@@ -9,7 +9,7 @@ export default function App() {
 
   console.log("Hired People", hiredPeople);
 
-function hireAPerson(person) {
+function hirePerson(person) {
   setHiredPeople([...hiredPeople, person])
 }
 
@@ -27,7 +27,7 @@ function hireAPerson(person) {
       </header>
       <Routes>
         <Route path="/view/:id" 
-        element={<PersonProfile hireAPerson={hireAPerson} />} />
+        element={<PersonProfile hirePerson={hirePerson} />} />
         <Route path="/" 
         element={<Dashboard hiredPeople={hiredPeople} />} />
       </Routes>
